@@ -171,8 +171,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Ribbon1.resx">
-      <DependentUpon>Ribbon1.cs</DependentUpon>
+    <EmbeddedResource Include="RibbonDemo.resx">
+      <DependentUpon>RibbonDemo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="OutlookAddInDecoderRing_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -183,11 +183,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Ribbon1.cs">
+    <Compile Include="RibbonDemo.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Ribbon1.Designer.cs">
-      <DependentUpon>Ribbon1.cs</DependentUpon>
+    <Compile Include="RibbonDemo.Designer.cs">
+      <DependentUpon>RibbonDemo.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
