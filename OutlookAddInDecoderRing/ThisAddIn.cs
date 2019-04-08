@@ -1,4 +1,5 @@
-﻿using Outlook = Microsoft.Office.Interop.Outlook;
+﻿using System.Windows.Forms;
+using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace OutlookAddInDecoderRing
 {
@@ -13,6 +14,22 @@ namespace OutlookAddInDecoderRing
 
             Outlook.Application application = Application;
             application.ItemSend += ItemSend_BeforeSend;
+
+            // Get the active Inspector object
+            Outlook.Inspector activeInspector = application.ActiveInspector();
+            if (activeInspector != null)
+            {
+                // Get the title of the active item when the Outlook start.
+                MessageBox.Show("Active inspector: " + activeInspector.Caption);
+            }
+
+            // Get the active Explorer object
+            Outlook.Explorer activeExplorer = application.ActiveExplorer();
+            if (activeExplorer != null)
+            {
+                // Get the title of the active folder when the Outlook start.
+                //MessageBox.Show("Active explorer: " + activeExplorer.Caption);
+            }
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
